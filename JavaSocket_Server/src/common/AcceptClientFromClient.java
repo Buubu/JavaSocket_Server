@@ -59,11 +59,6 @@ public class AcceptClientFromClient implements Runnable {
             dataOutput = new DataOutput(clientSocket);
             dataOutput.sendDownloadFiles(dl);
             
-            
-            
-            
-            
-
             Thread.sleep(3000);
 
             //TODO: when the client is connected, this message is still shown...

@@ -5,6 +5,8 @@ import java.net.*;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+
 import common.*;
 import common.Client;
 
@@ -18,7 +20,7 @@ public class AcceptClient implements Runnable {
     private InetAddress clientAddress;
     private DataOutput dataOutput;
     private Logger logger;
-    private FileHandler fh;
+    private FileManager fm;
     private DateManager dateManager;
     
     
@@ -30,17 +32,22 @@ public class AcceptClient implements Runnable {
         this.clients = clientListManager.readElements();
         this.dateManager = new DateManager();
         
+        
         // Logger
         logger = Logger.getLogger("acceptClient");
+        FileHandler fh = null;
+        
+        try {
+            fh = new FileHandler(".\\logger\\connection" + dateManager.getMonth() + "_" + dateManager.getYear() + ".log", true);
+            SimpleFormatter formatter = new SimpleFormatter();
+            fh.setFormatter(formatter);
+            logger.addHandler(fh);
 
-        try{
-            fh = new FileHandler("./logger/connection" + dateManager.getMonth() + ".log", true);
-        } catch (Exception e) { 
-        	// If the month's log doesn't, creates a new one
-            fh = new FileHandler("./logger/connection" + dateManager.getMonth() + ".log");
-        }
-
-        logger.addHandler(fh);
+        } catch (SecurityException e) {  
+            e.printStackTrace();  
+        } catch (IOException e) {  
+            e.printStackTrace();  
+        } finally {};       
     }
     
     
@@ -77,11 +84,7 @@ public class AcceptClient implements Runnable {
 
             dataOutput = new DataOutput(clientSocket);
             dataOutput.sendObject(clients);
-
-            
-            
-            
-            
+  
             Thread.sleep(3000);
             
             //TODO: when the client is already connected, this message is still shown...

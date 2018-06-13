@@ -13,4 +13,12 @@ public class DateManager {
         LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
         return localDate.getMonthValue();
     }
+    
+    
+	// Get the year value
+    public int getYear(){
+        Date date = new Date();
+        LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        return localDate.getYear();
+    }
 }

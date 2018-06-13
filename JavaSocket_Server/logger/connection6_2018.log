@@ -1,0 +1,24 @@
+juin 13, 2018 10:20:29 AM server.AcceptClient run
+INFOS: Java;Java;192.168.1.115;45000 creates a new account.
+juin 13, 2018 10:20:43 AM server.AcceptClient run
+INFOS: Java;Java;192.168.1.115;45000 creates a new account.
+juin 13, 2018 10:21:02 AM server.AcceptClient run
+AVERTISSEMENT: timmy;libulah;192.168.1.115;45000 used a wrong password.
+juin 13, 2018 10:21:06 AM server.AcceptClient run
+AVERTISSEMENT: timmy;libulah;192.168.1.115;45000 used a wrong password.
+juin 13, 2018 10:21:12 AM server.AcceptClient run
+AVERTISSEMENT: timmy;libulah;192.168.1.115;45000 used a wrong password.
+juin 13, 2018 10:21:16 AM server.AcceptClient run
+INFOS: timmy;libulah;192.168.1.115;45000 is connected.
+juin 13, 2018 10:25:53 AM server.AcceptClient run
+AVERTISSEMENT: Java;Java;192.168.1.115;45000 used a wrong password.
+juin 13, 2018 10:25:56 AM server.AcceptClient run
+AVERTISSEMENT: Java;Java;192.168.1.115;45000 used a wrong password.
+juin 13, 2018 10:25:59 AM server.AcceptClient run
+INFOS: Java;Java;192.168.1.115;45000 is connected.
+juin 13, 2018 10:29:36 AM server.AcceptClient run
+INFOS: Java;Java;192.168.1.115;45000 creates a new account.
+juin 13, 2018 10:29:47 AM server.AcceptClient run
+AVERTISSEMENT: Bornatch;test;192.168.1.115;45000 used a wrong password.
+juin 13, 2018 10:29:52 AM server.AcceptClient run
+INFOS: Bornatch;test;192.168.1.115;45000 is connected.
