@@ -1,12 +1,15 @@
 package server;
 
-public class Main {
+import common.NetworkManager;
 
-	public static void main(String[] args) {
+
+public class Main {
+    public static void main(String[] args) {
         System.out.println("zzZZzzZZzz");
         System.out.println("Eh.. Hey?!");
         System.out.println("Ok ok, i'm starting the server.");
 
-        NewServerConnection sc = new NewServerConnection();
-	}
+        NetworkManager netManager = new NetworkManager();
+        netManager.startingListening(true);
+    }
 }
